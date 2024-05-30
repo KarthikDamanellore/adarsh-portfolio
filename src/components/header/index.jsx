@@ -17,6 +17,7 @@ import {
 import logo from "../../assets/images/avatar(2).svg";
 import Chip from "@mui/material/Chip";
 import profileImg from "../../assets/images/brother.jpg";
+import resume from "../../assets/resume.pdf";
 import styles from "./global.module.css";
 
 const Header = (props) => {
@@ -33,7 +34,9 @@ const Header = (props) => {
     const link = document.createElement("a");
     link.href = url;
     link.download = url.split("/").pop();
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const renderLeftSection = () => {
@@ -84,7 +87,7 @@ const Header = (props) => {
                 key={index}
                 onClick={() => {
                   if (index === 3) {
-                    handleFileDownload(item.file);
+                    handleFileDownload(resume);
                   } else {
                     setAnchorEl(null);
                     setMenuItem(item?.title);
