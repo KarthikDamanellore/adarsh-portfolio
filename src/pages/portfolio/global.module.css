@@ -1,57 +1,60 @@
-.bannerTextStyles {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 200px);
+.bannerContainerStyles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 300px);
 }
 
 .mySelfImageStyles {
-    animation: animate 1s ease-in-out;
+  animation: animate 1s ease-in-out;
 }
 
 @keyframes animate {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .selfContentBlockStyles {
-    display: "flex";
-    flex-direction: "column";
-    gap: "10px";
-    animation: selfContentAnimation 1s ease-in-out;
+  display: "flex";
+  flex-direction: "column";
+  gap: "10px";
+  animation: selfContentAnimation 1s ease-in-out;
 }
 
 @keyframes selfContentAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(100%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 .imageStyles {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 /* Media Query Start */
-@media screen and (max-width : 510px) {
-    .educationImgStyles {
-        width: 20px;
-        height: 20px;
-    }
+@media screen and (max-width: 510px) {
+  .educationImgStyles {
+    width: 20px;
+    height: 20px;
+  }
+  .bannerTextStyles {
+    font-size: 20px;
+  }
 }
 
 /* Media Query End */
