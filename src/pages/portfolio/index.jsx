@@ -147,7 +147,7 @@ const PortFolioApp = () => {
   const renderEducationSection = () => {
     return (
       <>
-        <Box sx={educationBlockStyles}>
+        <Box className={styles.educationBlockStyles}>
           {educationData?.map((item, index) => {
             return (
               <Accordion
@@ -190,7 +190,7 @@ const PortFolioApp = () => {
 
   const renderSkillsSection = () => {
     return (
-      <>
+      <Box className={styles.skillsContainerStyles}>
         <Carousel
           responsive={responsive}
           keyBoardControl={true}
@@ -229,7 +229,7 @@ const PortFolioApp = () => {
           })}
         </Carousel>
         {renderCloseBtnSection()}
-      </>
+      </Box>
     );
   };
 
@@ -237,7 +237,7 @@ const PortFolioApp = () => {
     return (
       <>
         {contactUsData?.map((item, index) => (
-          <List key={index}>
+          <List key={index} className={styles.contactUsListStyles}>
             <ListItem disablePadding>
               <ListItemButton
                 onClick={() => {

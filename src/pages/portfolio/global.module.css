@@ -46,6 +46,54 @@
   object-fit: contain;
 }
 
+.educationBlockStyles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: educationBlockAnimation 1s ease-in-out;
+}
+
+@keyframes educationBlockAnimation {
+  0% {
+    opacity: 0;
+    scale: 1.25;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0%);
+  }
+}
+
+.skillsContainerStyles {
+  animation: skillsContainerAnimation 1s ease-in-out;
+}
+
+@keyframes skillsContainerAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contactUsListStyles {
+  animation: contactUsListStyles 1s ease-in-out;
+}
+
+@keyframes contactUsListStyles {
+  0% {
+    opacity: 0;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 /* Media Query Start */
 @media screen and (max-width: 510px) {
   .educationImgStyles {
