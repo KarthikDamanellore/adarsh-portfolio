@@ -239,7 +239,15 @@ const PortFolioApp = () => {
         {contactUsData?.map((item, index) => (
           <List key={index}>
             <ListItem disablePadding>
-              <ListItemButton onClick={() => window.open(item.link, "_blank")}>
+              <ListItemButton
+                onClick={() => {
+                  if (index === 5) {
+                    return null;
+                  } else {
+                    window.open(item.link, "_blank");
+                  }
+                }}
+              >
                 <ListItemIcon>{item?.icon}</ListItemIcon>
                 <ListItemText
                   primary={item?.title}
