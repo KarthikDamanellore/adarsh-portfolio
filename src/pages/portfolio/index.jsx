@@ -79,11 +79,13 @@ const PortFolioApp = () => {
       setIsMobile(window.innerWidth <= 510);
     };
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isMobile]);
+  }, []);
 
   const renderBannerSection = () => {
     return (
