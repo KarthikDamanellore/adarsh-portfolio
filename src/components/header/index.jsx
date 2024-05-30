@@ -17,6 +17,7 @@ import {
 import logo from "../../assets/images/avatar(2).svg";
 import Chip from "@mui/material/Chip";
 import profileImg from "../../assets/images/brother.jpg";
+import styles from "./global.module.css";
 
 const Header = (props) => {
   // props
@@ -37,11 +38,7 @@ const Header = (props) => {
 
   const renderLeftSection = () => {
     return (
-      <img
-        src={logo}
-        alt="logo"
-        style={{ width: "100px", height: "100px", borderRadius: "50%" }}
-      />
+      <img src={logo} alt="logo" style={{}} className={styles.logoImgStyles} />
     );
   };
 

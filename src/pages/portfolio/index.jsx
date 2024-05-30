@@ -83,7 +83,7 @@ const PortFolioApp = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   const renderBannerSection = () => {
     return (
@@ -196,6 +196,8 @@ const PortFolioApp = () => {
           keyBoardControl={true}
           swipeable={true}
           infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={1000}
           showDots={isMobile}
           arrows={!isMobile}
         >
