@@ -81,7 +81,7 @@ export const educationData = [
   {
     icon: pgIcon,
     graduation: "Master of Computer Applications (MCA)",
-    aggregate: "88%",
+    aggregate: "85.82%",
     year: "Dec 2021-Oct 2023",
     instituteName: "Sri Venkateswara College Of Engineering (SVCE)",
   },
