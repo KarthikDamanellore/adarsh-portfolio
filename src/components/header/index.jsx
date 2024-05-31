@@ -17,7 +17,7 @@ import {
 import logo from "../../assets/images/avatar(2).svg";
 import Chip from "@mui/material/Chip";
 import profileImg from "../../assets/images/brother.jpg";
-import resume from "../../assets/resume.pdf";
+import resume from "../../assets/resume1.pdf";
 import styles from "./global.module.css";
 
 const Header = (props) => {
@@ -30,13 +30,17 @@ const Header = (props) => {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
+  // const handleFileDownload = (url) => {
+  //   const link = document.createElement("a");
+  //   link.href = url;
+  //   link.download = url.split("/").pop();
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
+
   const handleFileDownload = (url) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = url.split("/").pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(url, "_blank");
   };
 
   const renderLeftSection = () => {
